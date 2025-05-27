@@ -4,6 +4,8 @@
 @use 'plans';
 @use 'available-devices';
 @use 'faq';
+@use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -22,6 +24,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -70,17 +73,45 @@ body {
 }
 
 .button {
-        display: block;
+        display: flex;
+        align-items: center;
         width: 100%;
+        justify-content: center;
         height: 60px;
         font-size: 18px;
         color: variaveis.$tsColor;
-        background-color: #6421ff;
+        background-color: variaveis.$bgButtonColorPrimary;
         text-transform: uppercase;
         border-radius: 4px;
-        margin-top: 2vw;
-        margin-bottom: 8px;
-    
+        text-decoration: none;
+        padding: 8px 14px;
+        letter-spacing: 1px;
+        border: 1px solid variaveis.$bgButtonColorPrimary;
+        cursor: pointer;
+
+            &:hover {
+                        background-color: lighten(variaveis.$bgButtonColorPrimary, 3%);
+                    }
+
+
+        &--secondary {
+            background-color: variaveis.$bgButtonColorSegundary;
+            border-color: variaveis.$bgButtonColorSegundary;
+
+                &:hover {
+                    background-color: lighten(variaveis.$bgButtonColorSegundary, 3%);
+                }
+        }
+
+        &--dark {
+            background-color: rgba(variaveis.$bgButtonColorDark, 0.8);
+            border-color: variaveis.$tsColor;
+
+                &:hover {
+                    background-color: variaveis.$tsColor;
+                    color: variaveis.$bgColor;
+                }
+        }
 }
 
 .image-text-section {
@@ -88,6 +119,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 
     img {
         max-width: 100%;
@@ -119,6 +154,11 @@ body {
             flex-direction: column;
             justify-content: center;
             
+            @media (max-width: 768px) {
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
         }
     }
 }
