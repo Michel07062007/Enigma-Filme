@@ -10,7 +10,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
-        @media (min-width: 0px), (max-width: 768px) {
+        @media (max-width: 768px) {
             grid-template-columns: 1fr 1fr;
         }
 
@@ -30,7 +30,7 @@
         display: flex;
         justify-content: center;
 
-        @media (min-width: 0px), (max-width: 768px) {
+        @media (max-width: 768px) {
             white-space: nowrap;
             overflow-x: scroll;
             padding-left: 20px;
@@ -47,7 +47,7 @@
             cursor: pointer;
             border-bottom: 5px solid transparent;
 
-            @media (min-width: 0px), (max-width: 768px) {
+            @media (max-width: 768px) {
                 font-size: 16px;
             }
 

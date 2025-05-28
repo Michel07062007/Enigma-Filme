@@ -26,7 +26,7 @@
         display: flex;
         justify-content: space-between;
 
-        @media (min-width: 0px), (max-width: 768px) {
+        @media (max-width: 768px) {
             padding: 0 12px 0 20px;
         }
     }
@@ -37,7 +37,7 @@
         margin: 5px;
         transition: opacity .5s ease;
 
-        @media (min-width: 0px), (max-width: 768px) {
+        @media (max-width: 768px) {
             max-width: 64px;
         }
     }
@@ -54,7 +54,7 @@
     .button {
         height: 50px;
 
-        @media (min-width: 0px), (max-width: 768px) {
+        @media (max-width: 768px) {
             font-size: 13px;
             padding: 8px 11px;
             height: 40px;

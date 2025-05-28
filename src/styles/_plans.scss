@@ -10,7 +10,7 @@
         justify-content: space-around;
         margin-top: 50px;
 
-        @media (min-width: 0px), (max-width: 768px) {
+        @media (max-width: 768px) {
             display: block;
         }
         
